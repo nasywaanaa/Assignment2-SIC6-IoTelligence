@@ -1,0 +1,1 @@
+# Assignment2-SIC6-IoTelligence
