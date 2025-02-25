@@ -31,6 +31,7 @@
 ## Overview
 Proyek ini bertujuan untuk membaca data suhu dan kelembapan dari sensor DHT11 yang terhubung ke ESP32, lalu mengirimkan data tersebut ke server Flask API. Data yang diterima akan disimpan di MongoDB Atlas untuk analisis lebih lanjut.
 
+![alt text](image.png)
 ---
 
 ## 🚀 Fitur
@@ -60,8 +61,8 @@ Proyek ini bertujuan untuk membaca data suhu dan kelembapan dari sensor DHT11 ya
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/username/esp32-flask-mongodb.git
-cd esp32-flask-mongodb
+git clone https://github.com/nasywaanaa/Assignment2-SIC6-IoTelligence.git
+cd Assignment2-SIC6-IoTelligence
 ```
 
 ### 2. Siapkan Virtual Environment Python
@@ -71,37 +72,16 @@ source venv/bin/activate  # Untuk Mac/Linux
 venv\Scripts\activate     # Untuk Windows
 ```
 
-### 3. Instalasi Dependency Python
+### 3. Jalankan Flask API
 ```bash
-pip install -r requirements.txt
-```
-
-Isi file `requirements.txt`:
-```bash
-Flask
-pymongo
-dnspython
-```
-
-### 4. Konfigurasi MongoDB Atlas
-- Buat akun di MongoDB Atlas.
-- Buat cluster baru.
-- Buat database dengan nama Challenge2.
-- Buat koleksi (collection) bernama SensorData.
-- Salin Connection String URI ke file .env
-```bash
-MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>/<dbname>?retryWrites=true&w=majority
-```
-
-### 5. Jalankan Flask API
-```bash
-python app.py
+python server.py
 ```
 
 ## 📡 Konfigurasi ESP32
 ### 1. Library yang Dibutuhkan (Install via Arduino IDE Library Manager)
 - DHT sensor library
 - WiFi.h (library bawaan ESP32)
+- Sketch -> Include Library -> add zip library (Ubidots ESP32 Main.zip)
 
 ### 2. Upload Kode ESP32
 - Sambungkan ESP32 ke komputer.
